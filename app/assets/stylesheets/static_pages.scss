@@ -1,0 +1,12 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$font-stack: Lato, Futura, Helvetica, sans-serif;
+$primary-color: darkgreen;
+
+h1, h2 {
+  font-family: $font-stack;
+  color: $primary-color;
+  text-align: center;
+}
