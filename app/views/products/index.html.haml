@@ -1,0 +1,26 @@
+%p#notice= notice
+
+%h1 Listing Products
+
+%table.table.table-condensed.table-hover
+  %thead
+    %tr
+      %th.col-sm-2 Name
+      %th.col-sm-5 Description
+      %th.col-sm-3 Image url
+      %th.col-sm-2
+
+  %tbody
+    - @products.each do |product|
+      %tr
+        %td= product.name
+        %td= product.description
+        %td= product.image_url
+        %td.btn.btn-group.text-right
+          .btn.btn-sm.btn-default= link_to 'Show', product
+          .btn.btn-sm.btn-default= link_to 'Edit', edit_product_path(product)
+          .btn.btn-sm.btn-default= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Product', new_product_path
