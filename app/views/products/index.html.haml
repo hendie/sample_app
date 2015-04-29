@@ -6,14 +6,16 @@
   %thead
     %tr
       %th.col-sm-2 Name
-      %th.col-sm-5 Description
-      %th.col-sm-3 Image url
+      %th.col-sm-2 Colour
+      %th.col-sm-4 Description
+      %th.col-sm-2 Image url
       %th.col-sm-2
 
   %tbody
     - @products.each do |product|
       %tr
         %td= product.name
+        %td= product.colour
         %td= product.description
         %td= product.image_url
         %td.btn.btn-group.text-right
