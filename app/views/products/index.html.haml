@@ -12,16 +12,7 @@
       %th.col-sm-2
 
   %tbody
-    - @products.each do |product|
-      %tr
-        %td= product.name
-        %td= product.colour
-        %td= product.description
-        %td= product.image_url
-        %td.btn.btn-group.text-right
-          .btn.btn-sm.btn-default= link_to 'Show', product
-          .btn.btn-sm.btn-default= link_to 'Edit', edit_product_path(product)
-          .btn.btn-sm.btn-default= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }
+    = render @products
 
 %br
 
