@@ -12,7 +12,12 @@
 
   %body
     %div.container
+      = render 'shared/nav'
+
       %h1 Welcome to Ruhe Farm
       %h2 Your source for local organic vegetables in New Brunswick
+
+      %p.notice= notice
+      %p.alert= alert
 
       = yield

@@ -10,3 +10,95 @@ h1, h2 {
   color: $primary-color;
   text-align: center;
 }
+
+/*Nav bar background and border*/
+.navbar {
+  background: black;
+  border-width: 0;
+}
+
+/*Home settting to keep it left and keep it from moving when
+  the navbar-header is displayed*/
+#home {
+  float: left;
+  margin-left: 1em;
+  margin-top: 0;
+}
+
+#home li a {
+  color: #fff;
+  transition: background-color 450ms ease;
+  -webkit-transition: background-color 450ms ease;
+  border-radius: 1em 1em 0 0;
+  height: 3.9em;	 /*keeps in line with right links*/
+  padding-top: 1.15em;  /*keeps in line with right links*/
+}
+
+/*Right side links to the right, upper, and spaced*/
+.nav {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/*For links, set background colour*/
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+  color: #fff;
+  background: #DCA459;
+  text-decoration: none;
+}
+
+/*When hovering, set background colour*/
+.navbar-inverse .navbar-nav>li>a:hover {
+  color: #fff;
+  background: #009688;
+}
+
+/*Set font colour*/
+.navbar-inverse .navbar-nav>li>a {
+  color: #fff;
+}
+
+/*Settings for right side menu*/
+.nav li a {
+  color: #fff;
+  transition: background-color 450ms ease;
+  -webkit-transition: background-color 450ms ease;
+  border-radius: 1em 1em 0 0;
+  height: 3.9em;
+}
+
+/*Settings for the search box*/
+.search-box {
+  height: 3.9em;	 /*keeps in line with right links*/
+  padding-top: 1em;  /*keeps in line with right links*/
+  margin-left: 0;
+  padding-left: 0;
+  margin-right: 1em;
+}
+
+/*Search box label colour*/
+.search-box label {
+  color: #fff;
+  font-weight: 100;
+}
+
+/*Search box input settings*/
+.search-box input {
+  color: black;
+}
+
+/*Settings for the menu items in the navbar header
+  when the navbar is being used*/
+@media (max-width: 47.938em) {
+  .navbar-right {
+    background-color: black;
+    margin-left: 75%;
+    opacity: 0.80;
+    filter: alpha(opacity=80); /* For IE8 and earlier*/
+  }
+  .navbar-right a {
+    text-align: left;
+    color: #fff;
+  }
+}
+

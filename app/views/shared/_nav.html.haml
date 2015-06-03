@@ -1,0 +1,35 @@
+<!-- Fixed navbar -->
+%nav.navbar.navbar-inverse.navbar-fixed-top{role: 'navigation'}
+
+  %div.container-fluid
+
+    <!--Navigations Links on Left-->
+    %ul.nav.navbar-nav.navbar-left#home
+      %li
+        = link_to 'Home', root_path
+
+    %div.navbar-header
+      %button.navbar-toggle{type: "button", data: {toggle: "collapse", target: ".navbar-collapse"}}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+
+    %div.navbar-collapse.collapse
+
+      <!--Navigations Links on Right-->
+      %ul.nav.navbar-nav.navbar-right#scrollSpy
+        %li= link_to 'Products', products_path
+        %li= link_to 'About', static_pages_about_path
+        %li= link_to 'Contact Us', static_pages_contact_path
+
+        - if user_signed_in?
+          %li= link_to 'Logout', destroy_user_session_path, method: :delete
+        - else
+          %li= link_to 'Login', new_user_session_path
+
+        %li.search-box
+          = form_tag "/products", method: "get" do
+            = label_tag :q, "Search for:"
+            = text_field_tag :q
+            = submit_tag "Search"
